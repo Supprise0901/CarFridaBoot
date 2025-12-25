@@ -10,7 +10,7 @@ class BootReceiver : BroadcastReceiver() {
             try {
                 Runtime.getRuntime().exec(arrayOf(
                     "su", "-c",
-                    "/data/local/car_frida_spawn/start_on_boot.sh"
+                    "/data/local/car_translate_hub/services/start.sh"
                 ))
             } catch (e: Exception) {
                 e.printStackTrace()
