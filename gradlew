@@ -9,6 +9,9 @@
 APP_NAME="Gradle"
 APP_BASE_NAME=`basename "$0"`
 
+# IMPORTANT: APP_HOME must be defined BEFORE CLASSPATH
+APP_HOME=`cd "$(dirname "$0")"; pwd -P`
+
 DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
 
 MAX_FD="maximum"
@@ -36,9 +39,7 @@ case "`uname`" in
   NONSTOP* ) nonstop=true ;;
 esac
 
-CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
-
-APP_HOME=`cd "$(dirname "$0")"; pwd -P`
+CLASSPATH="$APP_HOME/gradle/wrapper/gradle-wrapper.jar"
 
 if [ ! -f "$CLASSPATH" ]; then
     die "ERROR: gradle-wrapper.jar not found in $CLASSPATH"
